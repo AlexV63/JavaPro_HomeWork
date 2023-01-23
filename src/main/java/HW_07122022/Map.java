@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Map {
     public static void main(String[] args) {
+
         Test1 test1 = new Test1("Alex");
         Test1 test2 = new Test1("Bertha");
         Test1 test3 = new Test1("Otto");
@@ -24,13 +25,32 @@ public class Map {
         Test2 test07 = new Test2(38);
         Test2 test08 = new Test2(23);
         Test2 test09 = new Test2(21);
-        Test2 test010 = new Test2(50
-        );
+        Test2 test010 = new Test2(50);
 
- //       Map<Test2,Test1> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
 
+        map.put("Alex", 45);
+        map.put("Bertha", 36);
+        map.put("Otto", 29);
+        map.put("Hans", 35);
+        map.put("Karl", 26);
+        map.put("Klara", 42);
+        map.put("Elena", 38);
+        map.put("Olga", 23);
+        map.put("Natalia", 31);
+        map.put("Didi", 50);
 
+        for (String key : map.keySet()) {
+            Integer value = map.get(key);
+            System.out.println(key + " --> " + value);
+        }
 
+        map.putIfAbsent("Karl", 26); //добавить если отсутствует
+        System.out.println("***************************");
+        System.out.println("Размер мапы " + map.size());
+
+        System.out.println("***************************");
+        System.out.println("найти по ключу " + map.get("Olga"));
 
     }
 }
