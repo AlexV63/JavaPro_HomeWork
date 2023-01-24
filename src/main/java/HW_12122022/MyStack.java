@@ -1,12 +1,14 @@
 package HW_12122022;
 
-//public interface MyStack {
-//
-//    public E push(E item);
-//
-//    public E peek();
-//
-//    public E pop();
-//}
+import java.lang.reflect.Type;
+
+public interface MyStack {
+
+    void push();
+
+    void peek();
+    void pop();
+
+}
 
 

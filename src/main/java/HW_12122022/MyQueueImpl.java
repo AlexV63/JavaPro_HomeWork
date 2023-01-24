@@ -1,29 +1,25 @@
 package HW_12122022;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class MyQueueImpl implements MyQueue{
-// Collection
-    List<String> list = new ArrayList<>();
 
-    @Override
+     @Override
     public void add(Object el) {
-       list.add("Nikolay");
-       list.add("Sergey");
-       list.add("Dmitriy");
-       list.add("Slawa");
-       list.add("Stas");
-     }
+
+    }
 
     @Override
     public void remove(Object el) {
-        list.remove(3);
+
     }
 
     @Override
     public void isEmpty(Object el) {
-        list.isEmpty();
+
     }
 }
 
