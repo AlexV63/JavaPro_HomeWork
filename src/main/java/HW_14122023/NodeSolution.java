@@ -1,11 +1,9 @@
 package HW_14122023;
 
 import lombok.ToString;
-
 @ToString
 
 public class NodeSolution {
-
     public Integer value;
     public Node left;
     public Node right;
@@ -30,7 +28,6 @@ public class NodeSolution {
             insert(node.right, value);
         }
     }
-
     //todo
     private static Node search(Node node, int value) {
         if (!isNodeExist(node)) {
@@ -50,7 +47,6 @@ public class NodeSolution {
         }
         return getMin(node.left);
     }
-
     //todo
     private static Node getMax(Node node) {
         if (!isNodeExist(node)) {
@@ -61,8 +57,6 @@ public class NodeSolution {
         }
         return getMax(node.right);
     }
-
-
     //симметричный обход
     private static void inOrderTraversal(Node node) {
         if (!isNodeExist(node)) {
@@ -72,7 +66,6 @@ public class NodeSolution {
         System.out.println("[ " + node + " ]");
         inOrderTraversal(node.right);
     }
-
     //todo
     //обратный обход
     private static void postOrderTraversal(Node node) {
@@ -83,7 +76,6 @@ public class NodeSolution {
         inOrderTraversal(node.right);
         System.out.println("[ " + node + " ]");
     }
-
     //todo
     //прямой обход
     private static void directOrderTraversal(Node node) {
@@ -102,7 +94,6 @@ public class NodeSolution {
             toNode.value = (isNodeExist(fromNode)) ? fromNode.value : null;
         }
     }
-
     //todo
     private static int getChildrenCount(Node node) {
         int count = 0;
@@ -110,7 +101,6 @@ public class NodeSolution {
         if (node.right.value != null) count++;
         return count;
     }
-
     //todo
     private static Node getChildOrNull(Node node) {
         if (isNodeExist(node.left)) {
@@ -125,7 +115,6 @@ public class NodeSolution {
         Node childOrNull = getChildOrNull(nodeToDelete);
         moveNode(nodeToDelete, childOrNull);
     }
-
     //todo
     private static boolean remove(Node node, int value) {
         boolean isRemove;
@@ -140,7 +129,6 @@ public class NodeSolution {
         } else isRemove = false;
         return isRemove;
     }
-
 
     public static void main(String[] args) {
         Integer[] digit = {9, 2, 5, 13, 6, 10, 14, 7, 33, 44, 3};
