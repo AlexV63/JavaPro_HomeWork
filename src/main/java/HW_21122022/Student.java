@@ -1,8 +1,5 @@
 package HW_21122022;
 
-
-
-
 public class Student {
         private String name;
 
